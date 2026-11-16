@@ -352,7 +352,7 @@ function startWrite(){
    KHONG dung IFrame API nua: file:// khong co Referer nen YouTube tra loi 153.
    Chi chay dung khi mo qua LINK HOST https (Vercel) — mo file tu Downloads se luon loi 153. ----- */
 var YT_VIDEO_ID = 'wlN-UZIjd54';
-var FALLBACK_DUR = 90;
+var FALLBACK_DUR = 86;
 var endTimer = null, filmLoaded = false;
 function ytEmbedUrl(){
   return 'https://www.youtube-nocookie.com/embed/' + YT_VIDEO_ID + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
@@ -364,7 +364,7 @@ function startEndTimer(){
   clearFilmTimers();
   var dur = FAST ? 3 : FALLBACK_DUR;
   log('end timer set: ' + dur + 's from iframe load');
-  endTimer = setTimeout(function(){ log('end timer fired'); showThanks(); }, (dur + 2) * 1000);
+  endTimer = setTimeout(function(){ log('end timer fired'); showThanks(); }, (dur + 1) * 1000);
 }
 function openFilm(){
   show('filmScene');
